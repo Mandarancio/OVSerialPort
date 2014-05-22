@@ -49,7 +49,7 @@ public class RXTXNode extends OVNodeComponent implements SlotListener,
 		InNode n = addInput(_input, ValueType.INTEGER);
 		n.addListener(this);
 		output_ = addOutput(_output, ValueType.INTEGER);
-		Setting s = new Setting(_port, "port");
+		Setting s = new Setting(_port, "port",this);
 		addBothSetting(ComponentSettings.SpecificCategory, s);
 		initports();
 	}

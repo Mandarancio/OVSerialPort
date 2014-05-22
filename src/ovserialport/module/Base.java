@@ -8,6 +8,7 @@ import javax.swing.JMenuItem;
 
 import ovserialport.node.RXTXNode;
 import core.module.BaseModule;
+import gui.components.OVComponent;
 
 public class Base extends BaseModule {
 
@@ -33,8 +34,8 @@ public class Base extends BaseModule {
 	}
 
 	@Override
-	public HashMap<String, Class<?>> getComponents() {
-		HashMap<String, Class<?>> classes = new HashMap<>();
+	public HashMap<String, Class<? extends  OVComponent>> getComponents() {
+		HashMap<String, Class<? extends OVComponent>> classes = new HashMap<>();
 		classes.put(RXTXNode.getKey(), RXTXNode.class);
 		return classes;
 	}
